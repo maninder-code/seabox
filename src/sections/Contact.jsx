@@ -4,30 +4,47 @@ import { useState } from 'react'
 import { useI18n } from '../i18n/i18n.jsx'
 
 const HOURS = [
-  ['Monday','6:00am — 8:00pm'],
-  ['Tuesday','6:00am — 8:00pm'],
-  ['Wednesday','6:00am — 8:00pm'],
-  ['Thursday','6:00am — 8:00pm'],
-  ['Friday','6:00am — 8:00pm'],
-  ['Saturday','8:00am — 4:00pm'],
-  ['Sunday','Closed']
+  ['Monday', '6:00am — 8:00pm'],
+  ['Tuesday', '6:00am — 8:00pm'],
+  ['Wednesday', '6:00am — 8:00pm'],
+  ['Thursday', '6:00am — 8:00pm'],
+  ['Friday', '6:00am — 8:00pm'],
+  ['Saturday', '8:00am — 4:00pm'],
+  ['Sunday', 'Closed']
 ]
 
-export default function Contact(){
-  const { t } = useI18n()
-  const [form, setForm] = useState({ name:'', email:'', phone:'', message:'', consent:false })
-  const [submitted, setSubmitted] = useState(false)
+export default function Contact() {
+  const { locale, t } = useI18n()
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', consent: false })
+  const [submitted] = useState(false)
 
-  const handleChange = (e)=>{
-    const {name, type, checked, value} = e.target
-    setForm(prev => ({...prev, [name]: type==='checkbox'?checked:value}))
+  const handleChange = (e) => {
+    const { name, type, checked, value } = e.target
+    setForm(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }))
   }
-  const handleSubmit = (e)=>{
+
+  const [ setStatus ] = useState({ sending: false, error: null, ok: false })
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(()=>setSubmitted(false), 2500)
-    setForm({ name:'', email:'', phone:'', message:'', consent:false })
+    setStatus({ sending: true, error: null, ok: false })
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, locale })
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error || 'Server error')
+      }
+      setStatus({ sending: false, error: null, ok: true })
+      setForm({ name: '', email: '', phone: '', message: '', consent: false })
+    } catch (err) {
+      setStatus({ sending: false, error: err.message || 'Failed to send', ok: false })
+    }
   }
+
 
   return (
     <section id="contact" className="contact">
@@ -35,8 +52,8 @@ export default function Contact(){
         <div className="contact-grid">
           <div>
             <div className="eyebrow">{t('contact.eyebrow')}</div>
-            <h3 style={{fontFamily:'Playfair Display, serif', fontSize:28, margin:'0 0 8px'}}>{t('contact.title')}</h3>
-            <p style={{color:'#cfe2d7'}}>{t('contact.p')}</p>
+            <h3 style={{ fontFamily: 'Seabox Sans, serif', fontSize: 28, margin: '0 0 8px' }}>{t('contact.title')}</h3>
+            <p style={{ color: '#cfe2d7' }}>{t('contact.p')}</p>
 
             <form className="form" onSubmit={handleSubmit}>
               <div className="field">
@@ -59,7 +76,7 @@ export default function Contact(){
                 <input type="checkbox" id="consent" name="consent" checked={form.consent} onChange={handleChange} />
                 <label htmlFor="consent">{t('contact.form.consent')}</label>
               </div>
-              <button className="btn" type="submit">{submitted? t('contact.form.sent') : t('contact.form.submit')}</button>
+              <button className="btn" type="submit">{submitted ? t('contact.form.sent') : t('contact.form.submit')}</button>
             </form>
           </div>
 
