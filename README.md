@@ -1,2 +1,2 @@
 # seabox
-Seabos Transport Limited
+Seabox Transport Limited

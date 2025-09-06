@@ -1,0 +1,53 @@
+const e=`
+meta.title=Seabox Transport
+brand.name=Seabox Transport
+
+nav.home=Home
+nav.services=Services
+nav.fleet=Fleet
+nav.contact=Contact
+
+hero.eyebrow=Trusted trucking partner
+hero.title=Keep freight moving with Seabox Transport
+hero.lead=We operate a modern trailer fleet—dry vans, reefers, and flatbeds—to deliver coast-to-coast with transparency and care.
+hero.cta=Get a quote
+
+band.why.eyebrow=Why RoadHaul
+band.why.title=Transparent transportation solutions
+band.why.p1=From single pallets to oversized machinery, our dispatch team engineers the route, secures the right trailer, and tracks milestones—so you always know where your freight is.
+
+band.safety.title=Safety and compliance
+band.safety.p1=FMCSA-compliant drivers, ELD tracking, and rigorous maintenance keep our trucks and your freight safe on the road.
+band.safety.cta=Talk to dispatch
+
+services.eyebrow=Tailored freight options
+services.title=Streamlined options for every load
+services.ftl.title=Full Truckload (FTL)
+services.ftl.blurb=Door-to-door shipments with dedicated dry vans or reefers, tracked in real time.
+services.ltl.title=Less-than-Truckload (LTL)
+services.ltl.blurb=Flexible consolidations to control cost while keeping your deadlines.
+services.flatbed.title=Flatbed & Oversize
+services.flatbed.blurb=Specialized step-decks and RGNs with escort services for heavy or oversized cargo.
+
+contact.eyebrow=Get in touch
+contact.title=We’re here to move your freight
+contact.p=Tell us about your origin, destination, and commodity—our team will send a tailored quote.
+contact.form.name=Name *
+contact.form.email=Email address *
+contact.form.phone=Phone number *
+contact.form.message=Message
+contact.form.message.placeholder=Pickup, dropoff, commodity, weight, trailer type…
+contact.form.consent=I allow RoadHaul to store my submission so they can respond to my inquiry.
+contact.form.submit=Submit
+contact.form.sent=Sent ✔
+
+aside.title=Dispatch & Yard
+aside.address=2400 Logistics Way, Austin, TX
+aside.email=dispatch@roadhaul.io
+aside.phone=(555) 867-5309
+hours.label=Hours
+
+footer.privacy=Privacy
+footer.terms=Terms
+footer.copyright=© {year} Seabox Transport
+`;export{e as default};

@@ -1,0 +1,53 @@
+const a=`
+meta.title=RoadHaul Logística
+brand.name=RoadHaul Logística
+
+nav.home=Inicio
+nav.services=Servicios
+nav.fleet=Flota
+nav.contact=Contacto
+
+hero.eyebrow=Socio confiable de transporte
+hero.title=Mantén la carga en movimiento con RoadHaul
+hero.lead=Operamos una flota moderna: cajas secas, refrigerados y plataformas para entregar de costa a costa con transparencia y cuidado.
+hero.cta=Solicitar cotización
+
+band.why.eyebrow=Por qué RoadHaul
+band.why.title=Soluciones de transporte transparentes
+band.why.p1=Desde palets sueltos hasta maquinaria sobredimensionada, nuestro despacho diseña la ruta, asegura el remolque adecuado y sigue hitos para que siempre sepas dónde está tu carga.
+
+band.safety.title=Seguridad y cumplimiento
+band.safety.p1=Conductores con cumplimiento FMCSA, seguimiento ELD y mantenimiento riguroso mantienen seguros nuestros camiones y tu carga.
+band.safety.cta=Hablar con despacho
+
+services.eyebrow=Opciones de carga a medida
+services.title=Alternativas optimizadas para cada envío
+services.ftl.title=Carga completa (FTL)
+services.ftl.blurb=Envíos puerta a puerta con cajas secas o refrigeradas dedicadas y seguimiento en tiempo real.
+services.ltl.title=Carga consolidada (LTL)
+services.ltl.blurb=Consolidaciones flexibles para controlar costos y cumplir plazos.
+services.flatbed.title=Plataforma y sobredimensionados
+services.flatbed.blurb=Plataformas especiales y RGNs con escolta para carga pesada o sobredimensionada.
+
+contact.eyebrow=Ponte en contacto
+contact.title=Estamos listos para mover tu carga
+contact.p=Cuéntanos origen, destino y mercancía; nuestro equipo enviará una cotización a medida.
+contact.form.name=Nombre *
+contact.form.email=Correo electrónico *
+contact.form.phone=Teléfono *
+contact.form.message=Mensaje
+contact.form.message.placeholder=Recojo, entrega, mercancía, peso, tipo de remolque…
+contact.form.consent=Autorizo a RoadHaul a almacenar mi envío para responder a mi consulta.
+contact.form.submit=Enviar
+contact.form.sent=Enviado ✔
+
+aside.title=Despacho y patio
+aside.address=2400 Logistics Way, Austin, TX
+aside.email=dispatch@roadhaul.io
+aside.phone=(555) 867-5309
+hours.label=Horario
+
+footer.privacy=Privacidad
+footer.terms=Términos
+footer.copyright=© {year} RoadHaul
+`;export{a as default};

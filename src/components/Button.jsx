@@ -1,0 +1,1 @@
+export default function Button({children, href='#', onClick}){if(href)return <a className='btn' href={href} onClick={onClick}>{children}</a>;return <button className='btn' onClick={onClick}>{children}</button>}
