@@ -347,3 +347,95 @@ h1 {
     font-display: swap;
 }
 
+/* ---------- About ---------- */
+.about {
+    background: var(--ivory);
+    padding: 56px 0;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    align-items: center;
+}
+.about-card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+}
+.about-title {
+    margin: 0 0 10px;
+    font-family: 'Seabox Sans';
+    font-size: 28px;
+}
+
+.feature-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+}
+.feature-list li {
+    position: relative;
+    padding-left: 26px;
+    color: #3a4841;
+}
+.feature-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    color: var(--brand);
+}
+
+.about-ctas {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.about-media {
+    aspect-ratio: 4/3;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.about-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-stats {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.stat {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+    text-align: center;
+}
+.stat-num {
+    font-family: "Seabox Sans";
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--brand-strong);
+}
+.stat-label {
+    color: #3a4841;
+}
+
+@media (max-width: 960px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
