@@ -2,6 +2,7 @@ import Container from '../components/Container.jsx'
 import Button from '../components/Button.jsx'
 import { scrollToId } from '../utils/scroll.js'
 import { useI18n } from '../i18n/i18n.jsx'
+import aboutImg from '../data/images/banner.jpeg'
 
 export default function About() {
     const { t } = useI18n()
@@ -34,7 +35,7 @@ export default function About() {
 
                     <div className="about-media" aria-hidden="true">
                         <img
-                            src="src/data/Images/banner.jpeg?q=80&w=1600&auto=format&fit=crop"
+                            src={aboutImg}
                             alt="SeaBox Transport"
                         />
                     </div>

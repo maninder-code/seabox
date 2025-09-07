@@ -121,7 +121,7 @@ select {
             rgba(12, 24, 19, 0.08),
             rgba(12, 24, 19, 0)
         ),
-        url("src/data/Images/banner.jpeg?q=80&w=2000&auto=format&fit=crop")
+        url("../data/images/banner.jpeg?q=80&w=2000&auto=format&fit=crop")
             center/cover no-repeat;
 }
 .hero-inner {

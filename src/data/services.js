@@ -1,5 +1,9 @@
+import ftlImg from './images/seabox41.jpeg'
+import ltlImg from './images/seabox31.jpeg'
+import flatbedImg from './images/seabox61.jpeg'
+
 export const services = [
-  { id:'ftl', img:'src/data/Images/seabox41.jpeg' },
-  { id:'ltl', img:'src/data/Images/seabox31.jpeg' },
-  { id:'flatbed', img:'src/data/Images/seabox61.jpeg' }
+  { id:'ftl', img: ftlImg },
+  { id:'ltl', img: ltlImg },
+  { id:'flatbed', img: flatbedImg }
 ]
