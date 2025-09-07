@@ -134,8 +134,9 @@ function escapeHtml(s = "") {
     );
 }
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3017;
 app.listen(PORT, () =>
     console.log(`API listening on http://localhost:${PORT}`)
 );
+app.get('/api/health', (req,res) => res.json({ ok: true }))
 
