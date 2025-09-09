@@ -43,11 +43,11 @@ export default function About() {
 
                 <div className="about-stats">
                     <div className="stat">
-                        <div className="stat-num">750+</div>
-                        <div className="stat-label">{t('about.stats.clients')}</div>
+                        <div className="stat-num">100%</div>
+                        <div className="stat-label">{t('about.stats.satisfaction')}</div>
                     </div>
                     <div className="stat">
-                        <div className="stat-num">98%</div>
+                        <div className="stat-num">99%</div>
                         <div className="stat-label">{t('about.stats.ontime')}</div>
                     </div>
                     <div className="stat">
