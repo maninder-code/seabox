@@ -9,11 +9,11 @@ export default function IntroBand(){
         <div className="band-grid">
           <div className="panel">
             <div className="eyebrow">{t('band.why.eyebrow')}</div>
-            <h2>{t('band.why.title')}</h2>
+            <h2 className="panel-heading">{t('band.why.title')}</h2>
             <p>{t('band.why.p1')}</p>
           </div>
           <div className="panel">
-            <h2>{t('band.safety.title')}</h2>
+            <h2 className="panel-heading">{t('band.safety.title')}</h2>
             <p>{t('band.safety.p1')}</p>
             <a className="cta-minor" href="#contact">{t('band.safety.cta')}</a>
           </div>

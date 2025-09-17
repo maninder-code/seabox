@@ -8,8 +8,14 @@ import "dotenv/config";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const distPath = path.resolve(__dirname, "../dist");
 const app = express();
 app.use(express.json());
+app.use(express.static(distPath));
+app.use((req, res, next) => {
+    if (req.path.startsWith("/api")) return next();
+    res.sendFile(path.join(distPath, "index.html"));
+});
 
 function parseProperties(text) {
     const out = {};
@@ -71,9 +77,9 @@ const transporter = nodemailer.createTransport({
     auth:
         process.env.SMTP_USER && process.env.SMTP_PASS
             ? {
-                user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS,
-            }
+                  user: process.env.SMTP_USER,
+                  pass: process.env.SMTP_PASS,
+              }
             : undefined,
 });
 
@@ -89,11 +95,9 @@ app.post("/api/contact", async (req, res) => {
 
         const to = getRecipientFromLocale(locale);
         if (!to)
-            return res
-                .status(500)
-                .json({
-                    error: "Recipient email not configured in properties",
-                });
+            return res.status(500).json({
+                error: "Recipient email not configured in properties",
+            });
 
         const html = `
             <h2>New contact form submission</h2>
@@ -138,5 +142,5 @@ const PORT = process.env.PORT || 3017;
 app.listen(PORT, () =>
     console.log(`API listening on http://localhost:${PORT}`)
 );
-app.get('/api/health', (req,res) => res.json({ ok: true }))
+app.get("/api/health", (req, res) => res.json({ ok: true }));
 

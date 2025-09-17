@@ -1,6 +1,6 @@
-import ftlImg from './images/seabox41.jpeg'
-import ltlImg from './images/seabox31.jpeg'
-import flatbedImg from './images/seabox61.jpeg'
+import ftlImg from './images/seabox3.webp'
+import ltlImg from './images/seabox2.webp'
+import flatbedImg from './images/seabox1.webp'
 
 export const services = [
   { id:'ftl', img: ftlImg },
