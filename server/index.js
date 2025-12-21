@@ -77,9 +77,9 @@ const transporter = nodemailer.createTransport({
     auth:
         process.env.SMTP_USER && process.env.SMTP_PASS
             ? {
-                  user: process.env.SMTP_USER,
-                  pass: process.env.SMTP_PASS,
-              }
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS,
+            }
             : undefined,
 });
 
@@ -139,8 +139,7 @@ function escapeHtml(s = "") {
 }
 
 const PORT = process.env.PORT || 3017;
-app.listen(PORT, () =>
-    console.log(`API listening on http://localhost:${PORT}`)
-);
+const HOST = '127.0.0.1'
+app.listen(PORT, HOST, () => console.log(`[API] listening on http://${HOST}:${PORT}`));
 app.get("/api/health", (req, res) => res.json({ ok: true }));
 
