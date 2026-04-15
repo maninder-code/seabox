@@ -106,7 +106,7 @@ export default function Contact() {
 
           <aside className="aside">
             <h4>{t('aside.title')}</h4>
-            <div className="item">📍 {t('aside.address')}</div>
+            <div className="item">📍 116 Greenwood Road, Māngere, Auckland 2022, New Zealand</div>
             <div className="item">✉️ {t('aside.email')}</div>
             <div className="item">☎️ {t('aside.phone')}</div>
             <div className="hours">
