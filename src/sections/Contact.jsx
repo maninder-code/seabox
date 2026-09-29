@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react'
 import { useI18n } from '../i18n/i18n.jsx'
 
 const HOURS = [
-  ['Monday', '6:00am — 8:00pm'],
-  ['Tuesday', '6:00am — 8:00pm'],
-  ['Wednesday', '6:00am — 8:00pm'],
-  ['Thursday', '6:00am — 8:00pm'],
-  ['Friday', '6:00am — 8:00pm'],
-  ['Saturday', '8:00am — 4:00pm'],
-  ['Sunday', 'Closed']
+  ['Monday', 'Open 24 hours'],
+  ['Tuesday', 'Open 24 hours'],
+  ['Wednesday', 'Open 24 hours'],
+  ['Thursday', 'Open 24 hours'],
+  ['Friday', 'Open 24 hours'],
+  ['Saturday', 'Open 24 hours'],
+  ['Sunday', 'Open 24 hours']
 ]
 
 export default function Contact() {
